@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_inbloom_content_domain_Resource" items="${resources}" z="keSac0e/RlzRWhfho7/MEiAFJOo=">
+        <table:table data="${resources}" id="l_org_inbloom_content_domain_Resource" path="/resources" z="tIeLrWRcGSrfGh+rxhPKtKls1VQ=">
+            <table:column id="c_org_inbloom_content_domain_Resource_name" property="name" z="YI31pHd/jP1u152+glXdydlyxvU="/>
+            <table:column id="c_org_inbloom_content_domain_Resource_externalGUID" property="externalGUID" z="XNIeBl68jOmEwrPknIQQ/MmqT6g="/>
+            <table:column id="c_org_inbloom_content_domain_Resource_URL" property="URL" z="0wPKvlCaJU3ftPX4NpSARl4YTTU="/>
+            <table:column id="c_org_inbloom_content_domain_Resource_description" property="description" z="x9ieuREmUHK0mblFYdwQ6+9Zn7I="/>
+            <table:column id="c_org_inbloom_content_domain_Resource_copyrightYear" property="copyrightYear" z="ULauPBOT/PZBfquZJ0zATHx3CnI="/>
+            <table:column id="c_org_inbloom_content_domain_Resource_useRightsURL" property="useRightsURL" z="dUX94XeNp+b1w4IxYr0BdAyW91U="/>
+        </table:table>
+    </page:list>
+</div>

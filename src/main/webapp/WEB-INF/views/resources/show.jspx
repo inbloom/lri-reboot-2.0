@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_inbloom_content_domain_Resource" object="${resource}" path="/resources" z="qbVKs1Leo7JQCXENxNSDknm9cXU=">
+        <field:display field="name" id="s_org_inbloom_content_domain_Resource_name" object="${resource}" z="uaLQMh/Zx0rErrJMUiTIIvGngSU="/>
+        <field:display field="externalGUID" id="s_org_inbloom_content_domain_Resource_externalGUID" object="${resource}" z="5jlp3bOc4DRHA1B5NS3DJSIAAr4="/>
+        <field:display field="URL" id="s_org_inbloom_content_domain_Resource_URL" object="${resource}" z="PnVHeKzG8vYu76SFELERjOClke4="/>
+        <field:display field="description" id="s_org_inbloom_content_domain_Resource_description" object="${resource}" z="ZpufdtPG0RIc281E5tILX3hMfBA="/>
+        <field:display field="copyrightYear" id="s_org_inbloom_content_domain_Resource_copyrightYear" object="${resource}" z="z+pWizMEcJv8rOgiNslwvJhf2sU="/>
+        <field:display field="useRightsURL" id="s_org_inbloom_content_domain_Resource_useRightsURL" object="${resource}" z="gSzQuEsOuXTCqpCN82neQDUOBD4="/>
+        <field:display field="isBasedOnURL" id="s_org_inbloom_content_domain_Resource_isBasedOnURL" object="${resource}" z="vttmGc4U8i/h/dwOoGSyWxpoAzQ="/>
+        <field:display field="timeRequired" id="s_org_inbloom_content_domain_Resource_timeRequired" object="${resource}" z="TZ2vyyoFBnzFp/zd+L7C5O2JSLU="/>
+        <field:display field="lang" id="s_org_inbloom_content_domain_Resource_lang" object="${resource}" z="sOSg7CHjn9TRROHwzWmazp9UqmU="/>
+        <field:display field="interactivity" id="s_org_inbloom_content_domain_Resource_interactivity" object="${resource}" z="DwTVLUfoPkJiK2EoDEm6kMYH3BQ="/>
+        <field:display field="learningResource" id="s_org_inbloom_content_domain_Resource_learningResource" object="${resource}" z="KJxF6jwWHAUvHps1kjDdWuGzuI4="/>
+        <field:display field="audience" id="s_org_inbloom_content_domain_Resource_audience" object="${resource}" z="w9aDKmEA01yQbeZLOM2CpEG6Rbs="/>
+        <field:display field="tag" id="s_org_inbloom_content_domain_Resource_tag" object="${resource}" z="ivXAWdrtq3zAY3k93U8yZsNH8t0="/>
+        <field:display field="use" id="s_org_inbloom_content_domain_Resource_use" object="${resource}" z="Zv/Lmrxs++WEjdKRMihbiJQXrpA="/>
+        <field:display field="ageRange" id="s_org_inbloom_content_domain_Resource_ageRange" object="${resource}" z="BcnSyuR0JlcdMefHXMuPlTiwgGA="/>
+        <field:display field="sourceText" id="s_org_inbloom_content_domain_Resource_sourceText" object="${resource}" z="LkWRxSKbg9x6gLjpmwJLdLOpksY="/>
+        <field:display field="alignment" id="s_org_inbloom_content_domain_Resource_alignment" object="${resource}" z="TZ49pPx7Sc/trhQtx95G7vHOd0E="/>
+        <field:display field="resourcePartyPartyType" id="s_org_inbloom_content_domain_Resource_resourcePartyPartyType" object="${resource}" z="jg3TWtHL7xvmKw8iu7scLnNZe6M="/>
+        <field:display field="activity" id="s_org_inbloom_content_domain_Resource_activity" object="${resource}" z="sUJLfcRlsnGFksXSNZvwljdDCCM="/>
+    </page:show>
+</div>

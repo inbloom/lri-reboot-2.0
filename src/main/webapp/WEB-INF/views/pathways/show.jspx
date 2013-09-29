@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_inbloom_content_domain_Pathway" object="${pathway}" path="/pathways" z="dotRH0lvAJ2XC1LAP4GPouBzsPc=">
+        <field:display field="name" id="s_org_inbloom_content_domain_Pathway_name" object="${pathway}" z="/I3MocQqUA0vmQhC+EJhHp4iEAo="/>
+        <field:display field="standard" id="s_org_inbloom_content_domain_Pathway_standard" object="${pathway}" z="cXUgCxbcEnm7RZy1wQR8wU1iE1k="/>
+        <field:display field="pathwayNode" id="s_org_inbloom_content_domain_Pathway_pathwayNode" object="${pathway}" z="HmYuEdD+qLYLpFQ1YynSzmTxz6c="/>
+    </page:show>
+</div>

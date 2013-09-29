@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_inbloom_content_domain_Lang" modelAttribute="lang" path="/langs" versionField="Version" z="UyLvROqnCBBhfUe5ExFLPwwDjaM=">
+        <field:input field="name" id="c_org_inbloom_content_domain_Lang_name" z="a9Eb0zYZ8PCHbQAUtp+pbF+fe/k="/>
+        <field:input field="code" id="c_org_inbloom_content_domain_Lang_code" z="zpwjUEgW5SGqGh1Pv2jRgCDeXmk="/>
+        <field:simple field="resource" id="c_org_inbloom_content_domain_Lang_resource" messageCode="entity_reference_not_managed" messageCodeAttribute="Resource" z="L/2Yk/MA6e8VzCeRoeh5tuArRyM="/>
+    </form:update>
+</div>

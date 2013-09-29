@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_resourcepartypartytype" z="B/gKZimmlWL0f9Yaq6HkPsIVOq8=">
+            <menu:item id="i_resourcepartypartytype_new" messageCode="global_menu_new" url="/resourcepartypartytypes?form" z="rc6OmoG9UDnsHnCR/gMqTCepdpE="/>
+            <menu:item id="i_resourcepartypartytype_list" messageCode="global_menu_list" url="/resourcepartypartytypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="GvaV8137g9cF7FgksBk22DSXPsI="/>
+        </menu:category>
+        <menu:category id="c_resource" z="QccBeAQCWbFlycIXkFVzmR8srU0=">
+            <menu:item id="i_resource_new" messageCode="global_menu_new" url="/resources?form" z="F3oI3tJDA/wuL+veUMAjUDRDeog="/>
+            <menu:item id="i_resource_list" messageCode="global_menu_list" url="/resources?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZL5DxNGlBKsVWtUkvdhfo6CYoIQ="/>
+        </menu:category>
+        <menu:category id="c_lang" z="ZRuh/+8JTvOclLt6WDokmNcUZMA=">
+            <menu:item id="i_lang_new" messageCode="global_menu_new" url="/langs?form" z="1iu7xr33/rif0kTBKGvB94x3dPE="/>
+            <menu:item id="i_lang_list" messageCode="global_menu_list" url="/langs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="FuukG0cMdTbSIwq7DGyR8EKgOfI="/>
+        </menu:category>
+        <menu:category id="c_pathwaynode" z="t3P/PVbn6zV6A4EtTfZWX9AiDBI=">
+            <menu:item id="i_pathwaynode_new" messageCode="global_menu_new" url="/pathwaynodes?form" z="oIOkvv4QOQjmJ+udYTJhP4xbLXg="/>
+            <menu:item id="i_pathwaynode_list" messageCode="global_menu_list" url="/pathwaynodes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="nhE97LDyz50OISx12rRY08HP4B8="/>
+        </menu:category>
+        <menu:category id="c_pathway" z="ShPKLDJnw9NzjV/5/iLN+IUZfOk=">
+            <menu:item id="i_pathway_new" messageCode="global_menu_new" url="/pathways?form" z="pgJXXdFx6WSUtuD81d5EJgGUKSQ="/>
+            <menu:item id="i_pathway_list" messageCode="global_menu_list" url="/pathways?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HX0ZKsCp1Mb7ADDL2ATeS+Xs0qc="/>
+        </menu:category>
+        <menu:category id="c_interactivity" z="3eGbiW9zggTHFMSQghisGv1+JRs=">
+            <menu:item id="i_interactivity_new" messageCode="global_menu_new" url="/interactivitys?form" z="DGmhqL++KnqIiis8V0osHQYFiiQ="/>
+            <menu:item id="i_interactivity_list" messageCode="global_menu_list" url="/interactivitys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KZK3F0c58pfEBmkuHpUBURheSWs="/>
+        </menu:category>
+        <menu:category id="c_party" z="Z8rmZdTAVzpQyBwDnsxDBwIhSLk=">
+            <menu:item id="i_party_new" messageCode="global_menu_new" url="/partys?form" z="cqE+DtEJHx/j2e8KCetlps0Ha3o="/>
+            <menu:item id="i_party_list" messageCode="global_menu_list" url="/partys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Hlo969SGF2jwJWixpfjET81xyVY="/>
+        </menu:category>
+        <menu:category id="c_agerange" z="9W87N8SE7J+C5lfY+7KOZkSxx68=">
+            <menu:item id="i_agerange_new" messageCode="global_menu_new" url="/ageranges?form" z="BtxbOwiuQUbqAKBaTRVulmT+F0c="/>
+            <menu:item id="i_agerange_list" messageCode="global_menu_list" url="/ageranges?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Td2oc/1/NiqtrUdHAeKc+Kntm70="/>
+        </menu:category>
+        <menu:category id="c_audience" z="PJxWsUWOUuHJ6elOE4zZMi83O0U=">
+            <menu:item id="i_audience_new" messageCode="global_menu_new" url="/audiences?form" z="8Jg1gfu0Z5TQttpHmt1LqXyF9x0="/>
+            <menu:item id="i_audience_list" messageCode="global_menu_list" url="/audiences?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Y0sSp22b5AmqRSSXA+MnSJClar4="/>
+        </menu:category>
+        <menu:category id="c_learningmap" z="EKz61MjK3tz8R27wnP/9BEWol+I=">
+            <menu:item id="i_learningmap_new" messageCode="global_menu_new" url="/learningmaps?form" z="aZ2h7EzLH+nt5rqFNTomyuoV8N4="/>
+            <menu:item id="i_learningmap_list" messageCode="global_menu_list" url="/learningmaps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Ka7EEBWsuSiCsuLQYKdD1mk4gcs="/>
+        </menu:category>
+        <menu:category id="c_standard" z="fCbXqpWtEloZQn4YfY3XD4iJcFQ=">
+            <menu:item id="i_standard_new" messageCode="global_menu_new" url="/standards?form" z="UABRfcttICpQXOTMicHGMa2rP5A="/>
+            <menu:item id="i_standard_list" messageCode="global_menu_list" url="/standards?page=1&amp;size=${empty param.size ? 10 : param.size}" z="jehgJ/Nvkqn3AAtOdZQdpCzB7wY="/>
+        </menu:category>
+        <menu:category id="c_use" z="HtX7wzS2ATk2X45sy8kr1atDtgE=">
+            <menu:item id="i_use_new" messageCode="global_menu_new" url="/uses?form" z="P8N+DbwtuEEekcLQ7Q+UajLtNnQ="/>
+            <menu:item id="i_use_list" messageCode="global_menu_list" url="/uses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="M3UnmdauAFllTwSgnnEDrUOLN+0="/>
+        </menu:category>
+        <menu:category id="c_partytype" z="8b2wZd5VIlpQC1yBixI15dp0mJ8=">
+            <menu:item id="i_partytype_new" messageCode="global_menu_new" url="/partytypes?form" z="7Rl4tGqRdsrai4ITVjnP2Q7hTgM="/>
+            <menu:item id="i_partytype_list" messageCode="global_menu_list" url="/partytypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="mnnn1cOo89tyjOWqqUcEXSZ32jY="/>
+        </menu:category>
+        <menu:category id="c_activity" z="NF6PmQkAyo1JgYYtjuLuGgtZu1o=">
+            <menu:item id="i_activity_new" messageCode="global_menu_new" url="/activitys?form" z="humNnazx/vh/qV9QiaaPFxfrRKQ="/>
+            <menu:item id="i_activity_list" messageCode="global_menu_list" url="/activitys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Xp5og2rY8Oyevfsbh0NHJCrRUu4="/>
+        </menu:category>
+        <menu:category id="c_learningresource" z="Z7X2DXYLgH1Q0sC/OYketbPNgLU=">
+            <menu:item id="i_learningresource_new" messageCode="global_menu_new" url="/learningresources?form" z="qsFO6yotnmqy0PgdfaeuItelens="/>
+            <menu:item id="i_learningresource_list" messageCode="global_menu_list" url="/learningresources?page=1&amp;size=${empty param.size ? 10 : param.size}" z="YozMAA1dTU73Kwcn/j8c+MlVh6o="/>
+        </menu:category>
+        <menu:category id="c_alignmenttype" z="MB4k17SGoBPPnUOVX7uBMhL5n3Q=">
+            <menu:item id="i_alignmenttype_new" messageCode="global_menu_new" url="/alignmenttypes?form" z="0kNg+UYUO3MZeMA90wlB1U9reWc="/>
+            <menu:item id="i_alignmenttype_list" messageCode="global_menu_list" url="/alignmenttypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="D1Y5NQd8o/4pcHJzD4DZDpvXOT8="/>
+        </menu:category>
+        <menu:category id="c_tag" z="zbrDBteXk3LlkQMQy3xXpSv2428=">
+            <menu:item id="i_tag_new" messageCode="global_menu_new" url="/tags?form" z="c2MR5d7dttBSgnPxMMH7oOEDl6Q="/>
+            <menu:item id="i_tag_list" messageCode="global_menu_list" url="/tags?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HsTcxZ80PNENgslZ1+b/pv8MYug="/>
+        </menu:category>
+        <menu:category id="c_alignment" z="mqQ9nbSW40FSZf9Udm4uWK63QRE=">
+            <menu:item id="i_alignment_new" messageCode="global_menu_new" url="/alignments?form" z="/9fUrobQp0C0vfFB8jP82IUEuLs="/>
+            <menu:item id="i_alignment_list" messageCode="global_menu_list" url="/alignments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5zbUu47sE59CzkzUeKb53K344ZU="/>
+        </menu:category>
+    </menu:menu>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_inbloom_content_domain_Activity" items="${activitys}" z="EHg9L/xn5bMaeCiQwFg+duA42xg=">
+        <table:table data="${activitys}" id="l_org_inbloom_content_domain_Activity" path="/activitys" z="e9L3NFVsI7YA2MHK4G4MQXO8Nfs=">
+            <table:column id="c_org_inbloom_content_domain_Activity_resource" property="resource" z="P8jIW/qLTaQ/IwqB9omsFeAzB3E="/>
+            <table:column id="c_org_inbloom_content_domain_Activity_actor" property="actor" z="NL+RFALCpfK6LIWiAXRNFVqLZPw="/>
+            <table:column id="c_org_inbloom_content_domain_Activity_verb" property="verb" z="6RGXK7+F7U9z5nwVCtpa6LZevF8="/>
+            <table:column id="c_org_inbloom_content_domain_Activity_val" property="val" z="0IcPer8Abso00hOCeUEaUnqeM0w="/>
+        </table:table>
+    </page:list>
+</div>

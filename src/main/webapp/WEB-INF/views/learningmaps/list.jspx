@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_inbloom_content_domain_LearningMap" items="${learningmaps}" z="jPKn1NK39OaPgLWbdXF+lg2YuT8=">
+        <table:table data="${learningmaps}" id="l_org_inbloom_content_domain_LearningMap" path="/learningmaps" z="tmb6HA9XGbWNvP1vt7JpBckIzZw=">
+            <table:column id="c_org_inbloom_content_domain_LearningMap_name" property="name" z="+iMyfIX7YkSn36FP8n3qwNF1h6w="/>
+            <table:column id="c_org_inbloom_content_domain_LearningMap_standard" property="standard" z="nhal5B3GKfJUQh83PE+ZWXT6ky4="/>
+            <table:column id="c_org_inbloom_content_domain_LearningMap_payload" property="payload" z="om5K3xTr4QQmoMFNS5t72oAZqdc="/>
+        </table:table>
+    </page:list>
+</div>

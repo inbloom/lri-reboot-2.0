@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_inbloom_content_domain_AgeRange" items="${ageranges}" z="znB0h/suGE21oohH/Pp+raDaz6A=">
+        <table:table data="${ageranges}" id="l_org_inbloom_content_domain_AgeRange" path="/ageranges" z="UV2fZ75wrHlDWXWBtAopKuwgxdg=">
+            <table:column id="c_org_inbloom_content_domain_AgeRange_name" property="name" z="uUFX/TcIKbOtoTeveZ5Uzlj3VDE="/>
+            <table:column id="c_org_inbloom_content_domain_AgeRange_resource" property="resource" z="Q9DMKYHve/hWNjS3lqctkHP/Zek="/>
+        </table:table>
+    </page:list>
+</div>

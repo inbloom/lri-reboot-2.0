@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_inbloom_content_domain_Tag" object="${tag}" path="/tags" z="dJU9UZM7H4+UYhxfnBkKC/qrd+c=">
+        <field:display field="name" id="s_org_inbloom_content_domain_Tag_name" object="${tag}" z="0Ixuy1HbNYNq6QFXdFwG9tZ5p8o="/>
+        <field:display field="resource" id="s_org_inbloom_content_domain_Tag_resource" object="${tag}" z="thzagjhHC7g2kxI015QEYKI2Z7c="/>
+    </page:show>
+</div>

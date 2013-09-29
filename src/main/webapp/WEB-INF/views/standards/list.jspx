@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_inbloom_content_domain_Standard" items="${standards}" z="1JhHnC1TxLTOlHqzEtGcx8ThU/0=">
+        <table:table data="${standards}" id="l_org_inbloom_content_domain_Standard" path="/standards" z="lv3gL8pBjQpZsjIARSC0z+HDTdM=">
+            <table:column id="c_org_inbloom_content_domain_Standard_name" property="name" z="DWBRUfJrK6TMpAQAuozJkUoyJfE="/>
+            <table:column id="c_org_inbloom_content_domain_Standard_url" property="url" z="R6+98dTcwVMXyPvs94UlFPjvmUg="/>
+            <table:column id="c_org_inbloom_content_domain_Standard_externalId" property="externalId" z="9A+fSDgjaPmlJzwtGPBywxcachw="/>
+            <table:column id="c_org_inbloom_content_domain_Standard_parent" property="parent" z="EQDR4XA5XjjQtWhd9+zQk5MMGms="/>
+            <table:column id="c_org_inbloom_content_domain_Standard_child" property="child" z="yH9VhHkFN6t2nRMZ9hmtlbjesVU="/>
+            <table:column id="c_org_inbloom_content_domain_Standard_heading" property="heading" z="IZg4P9IWfRIMFW/x04AWXRr5bDc="/>
+        </table:table>
+    </page:list>
+</div>

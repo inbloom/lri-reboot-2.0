@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_inbloom_content_domain_Pathway" modelAttribute="pathway" path="/pathways" render="${empty dependencies}" z="4tV3eYmd+g5Amfm6kZprEnbnLi0=">
+        <field:input field="name" id="c_org_inbloom_content_domain_Pathway_name" z="Jbw0tjnvHltFyzWqzQkxn1uNXQQ="/>
+        <field:select field="standard" id="c_org_inbloom_content_domain_Pathway_standard" itemValue="id" items="${standards}" path="/standards" z="+ilxYtqjWCJtoH1N3FouQrJ9jlo="/>
+        <field:select field="pathwayNode" id="c_org_inbloom_content_domain_Pathway_pathwayNode" itemValue="id" items="${pathwaynodes}" multiple="true" path="/pathwaynodes" z="cac9FUeoJRQwKIaVfcvelkV7+to="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_inbloom_content_domain_Pathway" render="${not empty dependencies}" z="6y6AljQCHVx+c7IjFMl33LsJlag="/>
+</div>

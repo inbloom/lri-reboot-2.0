@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_inbloom_content_domain_Standard" object="${standard}" path="/standards" z="Fr6hmyQway4WwLcaHygY9F1stMM=">
+        <field:display field="name" id="s_org_inbloom_content_domain_Standard_name" object="${standard}" z="mMiDVntMUkurtwbGhVrnasIM2Eg="/>
+        <field:display field="url" id="s_org_inbloom_content_domain_Standard_url" object="${standard}" z="Jp7Z0o5lR2tBB5ZN0+rduYzUJPM="/>
+        <field:display field="externalId" id="s_org_inbloom_content_domain_Standard_externalId" object="${standard}" z="CTB8NDqwgYKSoWNKYoHMt4twp00="/>
+        <field:display field="parent" id="s_org_inbloom_content_domain_Standard_parent" object="${standard}" z="pYYNr++z6E4bwA435dwb8AspY9Y="/>
+        <field:display field="child" id="s_org_inbloom_content_domain_Standard_child" object="${standard}" z="K8CLbfVWQhb2NLyhjzo7lWyB4tg="/>
+        <field:display field="heading" id="s_org_inbloom_content_domain_Standard_heading" object="${standard}" z="o8zQMqdXUZgMCnZ+yho+4eST0eA="/>
+        <field:display field="subheading" id="s_org_inbloom_content_domain_Standard_subheading" object="${standard}" z="B45p4A0/N5YYR4WXh349P6IaxPI="/>
+        <field:display field="standard_text" id="s_org_inbloom_content_domain_Standard_standard_text" object="${standard}" z="DZtDTXwQtsJWIVPkJFwFNgUeIlw="/>
+        <field:display field="alignment" id="s_org_inbloom_content_domain_Standard_alignment" object="${standard}" z="mjsCu96yszb/ap4+P7fWx3BvT+g="/>
+        <field:display field="pathway" id="s_org_inbloom_content_domain_Standard_pathway" object="${standard}" z="ej53avWtk/a2NAnCutTxoxHiCbM="/>
+        <field:display field="pathwayNode" id="s_org_inbloom_content_domain_Standard_pathwayNode" object="${standard}" z="ThoVJgaEHcSXo+I1Fm4xc/UlFa0="/>
+        <field:display field="learningMap" id="s_org_inbloom_content_domain_Standard_learningMap" object="${standard}" z="G2cRzbHYPgTXZCsUHM67877u+7I="/>
+    </page:show>
+</div>

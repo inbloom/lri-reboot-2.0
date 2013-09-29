@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_inbloom_content_domain_AgeRange" modelAttribute="ageRange" path="/ageranges" render="${empty dependencies}" z="tewVE4JMI3oB6LVN3UZTFv2eik0=">
+        <field:input field="name" id="c_org_inbloom_content_domain_AgeRange_name" z="IT/XQeYzYU6fGucL1gyrjW0Dwig="/>
+        <field:select field="resource" id="c_org_inbloom_content_domain_AgeRange_resource" itemValue="id" items="${resources}" multiple="true" path="/resources" z="+0QLx2hc9v2UHE//wKtkvAJjizA="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_inbloom_content_domain_AgeRange" render="${not empty dependencies}" z="JuIfT7pysoTyopd6ZkJ8dh4OGwU="/>
+</div>

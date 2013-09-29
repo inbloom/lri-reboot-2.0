@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_inbloom_content_domain_Activity" object="${activity}" path="/activitys" z="77Hs2+OdlMuVI4iexVWRB1LG+sw=">
+        <field:display field="resource" id="s_org_inbloom_content_domain_Activity_resource" object="${activity}" z="ADI8VVMOXv2Te6J7n7N7QHz3BzE="/>
+        <field:display field="actor" id="s_org_inbloom_content_domain_Activity_actor" object="${activity}" z="wRSiTvMQsrQUiJn5qpseuRGhe60="/>
+        <field:display field="verb" id="s_org_inbloom_content_domain_Activity_verb" object="${activity}" z="T2Mz/mzq1sumoGYPm1vhnrlw/pc="/>
+        <field:display field="val" id="s_org_inbloom_content_domain_Activity_val" object="${activity}" z="PmO+Oyuj8mPJ+Uor3SCnSkVJ4yU="/>
+    </page:show>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_inbloom_content_domain_Alignment" object="${alignment}" path="/alignments" z="7SBukdM93Xd4dlaW27bENXwQvJY=">
+        <field:display field="standard" id="s_org_inbloom_content_domain_Alignment_standard" object="${alignment}" z="ggUytA4ufKA5jfgtelOI4Ioz9Qg="/>
+        <field:display field="resource" id="s_org_inbloom_content_domain_Alignment_resource" object="${alignment}" z="QtXIjNFy98eWpUd6rKC6GDHBCEI="/>
+        <field:display field="alignmentType" id="s_org_inbloom_content_domain_Alignment_alignmentType" object="${alignment}" z="ZFUo02trV06buhRjzOO+5SCZlp0="/>
+    </page:show>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_inbloom_content_domain_Alignment" items="${alignments}" z="Ga17BREVUefcTB03P+NtAuGXGf0=">
+        <table:table data="${alignments}" id="l_org_inbloom_content_domain_Alignment" path="/alignments" z="4jsefWLPFBjUITkCi8DEOO4B0hY=">
+            <table:column id="c_org_inbloom_content_domain_Alignment_standard" property="standard" z="EVS31XoUsHPLQmPp8uF60mNavyU="/>
+            <table:column id="c_org_inbloom_content_domain_Alignment_resource" property="resource" z="nzjLdiGiu4Pqi+2ZVifXQ7fBxJM="/>
+            <table:column id="c_org_inbloom_content_domain_Alignment_alignmentType" property="alignmentType" z="UT+m7SFBRRM0hdks7xJWmDS5Xb8="/>
+        </table:table>
+    </page:list>
+</div>

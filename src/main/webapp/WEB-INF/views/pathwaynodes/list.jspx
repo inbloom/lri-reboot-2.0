@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_inbloom_content_domain_PathwayNode" items="${pathwaynodes}" z="3MkEmA6fNQl9GY57la9txHeV5Qs=">
+        <table:table data="${pathwaynodes}" id="l_org_inbloom_content_domain_PathwayNode" path="/pathwaynodes" z="5CCuc30bYEhKX2G2m9rSfBIOG9E=">
+            <table:column id="c_org_inbloom_content_domain_PathwayNode_standard" property="standard" z="Kmnyl8TyhaQJPG2o1aNL8cI9g7U="/>
+            <table:column id="c_org_inbloom_content_domain_PathwayNode_pathway" property="pathway" z="ITH9ilibIvyX4bx8bg3XpsAC9tQ="/>
+            <table:column id="c_org_inbloom_content_domain_PathwayNode_priorStep" property="priorStep" z="WFTs787eopuOBwqZP0+IhJmEMp0="/>
+            <table:column id="c_org_inbloom_content_domain_PathwayNode_nextStep" property="nextStep" z="8CTd8XP1vgQsEm05/+/4Pq6WrgA="/>
+        </table:table>
+    </page:list>
+</div>

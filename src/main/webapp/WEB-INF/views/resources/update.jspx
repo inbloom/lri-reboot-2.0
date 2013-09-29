@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_inbloom_content_domain_Resource" modelAttribute="resource" path="/resources" versionField="Version" z="35EEKlNkkRKITpsAtdO6MBhNjHY=">
+        <field:input field="name" id="c_org_inbloom_content_domain_Resource_name" z="AnrKQ5hqjD1z+MAlQoSOiFDCAAQ="/>
+        <field:input field="externalGUID" id="c_org_inbloom_content_domain_Resource_externalGUID" z="FuDlBZ1INSbQO8Sgtq4wCflxE58="/>
+        <field:input field="URL" id="c_org_inbloom_content_domain_Resource_URL" z="OVAIE2ahpWswDlj6PR2BeOVpHBQ="/>
+        <field:input field="description" id="c_org_inbloom_content_domain_Resource_description" z="/fgfEhtGMLwQhTfslE0e+CHmnDo="/>
+        <field:input field="copyrightYear" id="c_org_inbloom_content_domain_Resource_copyrightYear" z="nWDvhwv7hFtT2P2qZ5y5BCosoTg="/>
+        <field:input field="useRightsURL" id="c_org_inbloom_content_domain_Resource_useRightsURL" z="oGrtBH2AiWop/DYUHsgNYLjCHv8="/>
+        <field:input field="isBasedOnURL" id="c_org_inbloom_content_domain_Resource_isBasedOnURL" z="ijUMSujeA+RcYeHVrX4QHRIUyXA="/>
+        <field:input field="timeRequired" id="c_org_inbloom_content_domain_Resource_timeRequired" z="N5/qOCav3bXKnchSB6qjjlQuUnw="/>
+        <field:select field="lang" id="c_org_inbloom_content_domain_Resource_lang" itemValue="id" items="${langs}" path="/langs" z="RnJ0dSsal865JO8SK1465HLc4d0="/>
+        <field:select field="interactivity" id="c_org_inbloom_content_domain_Resource_interactivity" itemValue="id" items="${interactivitys}" path="/interactivitys" z="lDqTMrJGW5L/25HgQm3YQ+p87eE="/>
+        <field:select field="learningResource" id="c_org_inbloom_content_domain_Resource_learningResource" itemValue="id" items="${learningresources}" path="/learningresources" z="DxwavpHrqxCaxhZGq6jgr8W5uNA="/>
+        <field:select field="audience" id="c_org_inbloom_content_domain_Resource_audience" itemValue="id" items="${audiences}" multiple="true" path="/audiences" z="lr5gn/+N3l3do9ZdEuSdGYoV+Nc="/>
+        <field:select field="tag" id="c_org_inbloom_content_domain_Resource_tag" itemValue="id" items="${tags}" multiple="true" path="/tags" z="PLp4+WwmA4hq6rKugyBsse000T4="/>
+        <field:select field="use" id="c_org_inbloom_content_domain_Resource_use" itemValue="id" items="${uses}" multiple="true" path="/uses" z="8cKWcta9XqikNyFl7u0cCLPM20I="/>
+        <field:select field="ageRange" id="c_org_inbloom_content_domain_Resource_ageRange" itemValue="id" items="${ageranges}" multiple="true" path="/ageranges" z="x4eeI2x9S7quFOhjR5hgQVJ/LU0="/>
+        <field:input field="sourceText" id="c_org_inbloom_content_domain_Resource_sourceText" z="hZDYWAg1v/uudUNxiXl6ShSfNmQ="/>
+        <field:select field="alignment" id="c_org_inbloom_content_domain_Resource_alignment" itemValue="id" items="${alignments}" multiple="true" path="/alignments" z="y+UYWk0iOa/opkpHUqS4eAvZfoo="/>
+        <field:select field="resourcePartyPartyType" id="c_org_inbloom_content_domain_Resource_resourcePartyPartyType" itemValue="id" items="${resourcepartypartytypes}" multiple="true" path="/resourcepartypartytypes" z="GWz+aCVbpSe9MO+dlSp6su+fZQM="/>
+        <field:select field="activity" id="c_org_inbloom_content_domain_Resource_activity" itemValue="id" items="${activitys}" multiple="true" path="/activitys" z="gS0RHjoRN72UQJIwq5flwFbk5tU="/>
+    </form:update>
+</div>
