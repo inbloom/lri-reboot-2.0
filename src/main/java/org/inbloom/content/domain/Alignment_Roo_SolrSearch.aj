@@ -4,7 +4,6 @@
 package org.inbloom.content.domain;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import javax.persistence.PostPersist;
 import javax.persistence.PostUpdate;
@@ -12,7 +11,6 @@ import javax.persistence.PreRemove;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrInputDocument;
 import org.inbloom.content.domain.Alignment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -40,29 +38,6 @@ privileged aspect Alignment_Roo_SolrSearch {
         List<Alignment> alignments = new ArrayList<Alignment>();
         alignments.add(alignment);
         indexAlignments(alignments);
-    }
-    
-    @Async
-    public static void Alignment.indexAlignments(Collection<Alignment> alignments) {
-        List<SolrInputDocument> documents = new ArrayList<SolrInputDocument>();
-        for (Alignment alignment : alignments) {
-            SolrInputDocument sid = new SolrInputDocument();
-            sid.addField("id", "alignment_" + alignment.getId());
-            sid.addField("alignment.standard_t", alignment.getStandard());
-            sid.addField("alignment.resource_t", alignment.getResource());
-            sid.addField("alignment.alignmenttype_t", alignment.getAlignmentType());
-            sid.addField("alignment.id_l", alignment.getId());
-            // Add summary field to allow searching documents for objects of this type
-            sid.addField("alignment_solrsummary_t", new StringBuilder().append(alignment.getStandard()).append(" ").append(alignment.getResource()).append(" ").append(alignment.getAlignmentType()).append(" ").append(alignment.getId()));
-            documents.add(sid);
-        }
-        try {
-            SolrServer solrServer = solrServer();
-            solrServer.add(documents);
-            solrServer.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
     
     @Async

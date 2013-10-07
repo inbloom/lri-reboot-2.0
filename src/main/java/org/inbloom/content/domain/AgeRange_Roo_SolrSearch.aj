@@ -4,7 +4,6 @@
 package org.inbloom.content.domain;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import javax.persistence.PostPersist;
 import javax.persistence.PostUpdate;
@@ -12,7 +11,6 @@ import javax.persistence.PreRemove;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrInputDocument;
 import org.inbloom.content.domain.AgeRange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -40,27 +38,6 @@ privileged aspect AgeRange_Roo_SolrSearch {
         List<AgeRange> ageranges = new ArrayList<AgeRange>();
         ageranges.add(ageRange);
         indexAgeRanges(ageranges);
-    }
-    
-    @Async
-    public static void AgeRange.indexAgeRanges(Collection<AgeRange> ageranges) {
-        List<SolrInputDocument> documents = new ArrayList<SolrInputDocument>();
-        for (AgeRange ageRange : ageranges) {
-            SolrInputDocument sid = new SolrInputDocument();
-            sid.addField("id", "agerange_" + ageRange.getId());
-            sid.addField("ageRange.name_s", ageRange.getName());
-            sid.addField("ageRange.id_l", ageRange.getId());
-            // Add summary field to allow searching documents for objects of this type
-            sid.addField("agerange_solrsummary_t", new StringBuilder().append(ageRange.getName()).append(" ").append(ageRange.getId()));
-            documents.add(sid);
-        }
-        try {
-            SolrServer solrServer = solrServer();
-            solrServer.add(documents);
-            solrServer.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
     
     @Async

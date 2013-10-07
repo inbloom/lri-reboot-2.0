@@ -4,7 +4,6 @@ import java.util.Set;
 
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.common.SolrDocument;
-import org.apache.solr.common.SolrDocumentList;
 import org.inbloom.content.domain.Activity;
 import org.inbloom.content.domain.AgeRange;
 import org.inbloom.content.domain.Audience;

@@ -4,7 +4,6 @@
 package org.inbloom.content.domain;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import javax.persistence.PostPersist;
 import javax.persistence.PostUpdate;
@@ -12,7 +11,6 @@ import javax.persistence.PreRemove;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrInputDocument;
 import org.inbloom.content.domain.Interactivity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -40,27 +38,6 @@ privileged aspect Interactivity_Roo_SolrSearch {
         List<Interactivity> interactivitys = new ArrayList<Interactivity>();
         interactivitys.add(interactivity);
         indexInteractivitys(interactivitys);
-    }
-    
-    @Async
-    public static void Interactivity.indexInteractivitys(Collection<Interactivity> interactivitys) {
-        List<SolrInputDocument> documents = new ArrayList<SolrInputDocument>();
-        for (Interactivity interactivity : interactivitys) {
-            SolrInputDocument sid = new SolrInputDocument();
-            sid.addField("id", "interactivity_" + interactivity.getId());
-            sid.addField("interactivity.name_s", interactivity.getName());
-            sid.addField("interactivity.id_l", interactivity.getId());
-            // Add summary field to allow searching documents for objects of this type
-            sid.addField("interactivity_solrsummary_t", new StringBuilder().append(interactivity.getName()).append(" ").append(interactivity.getId()));
-            documents.add(sid);
-        }
-        try {
-            SolrServer solrServer = solrServer();
-            solrServer.add(documents);
-            solrServer.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
     
     @Async

@@ -4,7 +4,6 @@
 package org.inbloom.content.domain;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import javax.persistence.PostPersist;
 import javax.persistence.PostUpdate;
@@ -12,7 +11,6 @@ import javax.persistence.PreRemove;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrInputDocument;
 import org.inbloom.content.domain.Activity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -40,30 +38,6 @@ privileged aspect Activity_Roo_SolrSearch {
         List<Activity> activitys = new ArrayList<Activity>();
         activitys.add(activity);
         indexActivitys(activitys);
-    }
-    
-    @Async
-    public static void Activity.indexActivitys(Collection<Activity> activitys) {
-        List<SolrInputDocument> documents = new ArrayList<SolrInputDocument>();
-        for (Activity activity : activitys) {
-            SolrInputDocument sid = new SolrInputDocument();
-            sid.addField("id", "activity_" + activity.getId());
-            sid.addField("activity.resource_t", activity.getResource());
-            sid.addField("activity.actor_s", activity.getActor());
-            sid.addField("activity.verb_s", activity.getVerb());
-            sid.addField("activity.val_s", activity.getVal());
-            sid.addField("activity.id_l", activity.getId());
-            // Add summary field to allow searching documents for objects of this type
-            sid.addField("activity_solrsummary_t", new StringBuilder().append(activity.getResource()).append(" ").append(activity.getActor()).append(" ").append(activity.getVerb()).append(" ").append(activity.getVal()).append(" ").append(activity.getId()));
-            documents.add(sid);
-        }
-        try {
-            SolrServer solrServer = solrServer();
-            solrServer.add(documents);
-            solrServer.commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
     
     @Async

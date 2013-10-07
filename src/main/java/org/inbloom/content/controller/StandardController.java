@@ -2,6 +2,9 @@ package org.inbloom.content.controller;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.common.SolrDocument;
 import org.inbloom.content.domain.Pathway;
 import org.inbloom.content.domain.PathwayNode;
 import org.inbloom.content.domain.Standard;
@@ -14,8 +17,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.roo.addon.web.mvc.controller.json.RooWebJson;
+
 import flexjson.JSONSerializer;
 import flexjson.transformer.IterableTransformer;
 
@@ -144,4 +149,20 @@ public class StandardController {
         headers.add("Location", ServletUriComponentsBuilder.fromCurrentRequest().path("/").path(standard.getId().toString()).build().toString());
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
+	
+	@RequestMapping(value = "/search", method = RequestMethod.GET, headers = "Accept=application/json")
+	public ResponseEntity<String> searchSolr(@RequestParam("query") String query) {
+		Set<Standard> standards = new HashSet<Standard>();
+		for (SolrDocument document: Standard.search(new SolrQuery(query)).getResults()) {
+			Long standardId = (Long) document.getFieldValue("standard.id_l");
+			Standard standard = Standard.findStandard(standardId);
+			standards.add(standard);
+		}
+		
+		JSONSerializer serializer = new JSONSerializer().transform(new IterableTransformer(), Set.class);
+		String responseString = serializer.serialize(standards);
+		HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+		return new ResponseEntity<String>(responseString, headers, HttpStatus.OK);
+	}
 }
