@@ -9,6 +9,7 @@ import org.inbloom.content.domain.AgeRange;
 import org.inbloom.content.domain.Alignment;
 import org.inbloom.content.domain.AlignmentType;
 import org.inbloom.content.domain.Audience;
+import org.inbloom.content.domain.Interactivity;
 import org.inbloom.content.domain.Lang;
 import org.inbloom.content.domain.LearningMap;
 import org.inbloom.content.domain.LearningResource;
@@ -145,6 +146,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, org.inbloom.content.domain.Audience>() {
             public org.inbloom.content.domain.Audience convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Audience.class);
+            }
+        };
+    }
+    
+    public Converter<Interactivity, String> ApplicationConversionServiceFactoryBean.getInteractivityToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<org.inbloom.content.domain.Interactivity, java.lang.String>() {
+            public String convert(Interactivity interactivity) {
+                return new StringBuilder().append(interactivity.getName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Interactivity> ApplicationConversionServiceFactoryBean.getIdToInteractivityConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, org.inbloom.content.domain.Interactivity>() {
+            public org.inbloom.content.domain.Interactivity convert(java.lang.Long id) {
+                return Interactivity.findInteractivity(id);
+            }
+        };
+    }
+    
+    public Converter<String, Interactivity> ApplicationConversionServiceFactoryBean.getStringToInteractivityConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, org.inbloom.content.domain.Interactivity>() {
+            public org.inbloom.content.domain.Interactivity convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Interactivity.class);
             }
         };
     }
@@ -453,6 +478,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getAudienceToStringConverter());
         registry.addConverter(getIdToAudienceConverter());
         registry.addConverter(getStringToAudienceConverter());
+        registry.addConverter(getInteractivityToStringConverter());
+        registry.addConverter(getIdToInteractivityConverter());
+        registry.addConverter(getStringToInteractivityConverter());
         registry.addConverter(getLangToStringConverter());
         registry.addConverter(getIdToLangConverter());
         registry.addConverter(getStringToLangConverter());
