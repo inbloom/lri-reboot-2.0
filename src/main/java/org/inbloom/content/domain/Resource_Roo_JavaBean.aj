@@ -91,19 +91,19 @@ privileged aspect Resource_Roo_JavaBean {
         this.lang = lang;
     }
     
-    public Interactivity Resource.getInteractivity() {
+    public List<Interactivity> Resource.getInteractivity() {
         return this.interactivity;
     }
     
-    public void Resource.setInteractivity(Interactivity interactivity) {
+    public void Resource.setInteractivity(List<Interactivity> interactivity) {
         this.interactivity = interactivity;
     }
     
-    public LearningResource Resource.getLearningResource() {
+    public List<LearningResource> Resource.getLearningResource() {
         return this.learningResource;
     }
     
-    public void Resource.setLearningResource(LearningResource learningResource) {
+    public void Resource.setLearningResource(List<LearningResource> learningResource) {
         this.learningResource = learningResource;
     }
     

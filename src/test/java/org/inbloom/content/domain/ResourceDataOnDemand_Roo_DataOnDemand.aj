@@ -10,9 +10,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import org.inbloom.content.domain.InteractivityDataOnDemand;
 import org.inbloom.content.domain.LangDataOnDemand;
-import org.inbloom.content.domain.LearningResourceDataOnDemand;
 import org.inbloom.content.domain.Resource;
 import org.inbloom.content.domain.ResourceDataOnDemand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,13 +25,7 @@ privileged aspect ResourceDataOnDemand_Roo_DataOnDemand {
     private List<Resource> ResourceDataOnDemand.data;
     
     @Autowired
-    InteractivityDataOnDemand ResourceDataOnDemand.interactivityDataOnDemand;
-    
-    @Autowired
     LangDataOnDemand ResourceDataOnDemand.langDataOnDemand;
-    
-    @Autowired
-    LearningResourceDataOnDemand ResourceDataOnDemand.learningResourceDataOnDemand;
     
     public Resource ResourceDataOnDemand.getNewTransientResource(int index) {
         Resource obj = new Resource();

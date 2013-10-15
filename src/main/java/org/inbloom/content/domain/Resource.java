@@ -5,19 +5,14 @@ import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.serializable.RooSerializable;
 import org.springframework.roo.addon.tostring.RooToString;
-
 import javax.persistence.ManyToOne;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
-
 import java.util.HashSet;
 import java.util.Set;
-
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.solr.RooSolrSearchable;
 import org.springframework.scheduling.annotation.Async;
@@ -69,13 +64,13 @@ public class Resource {
 
     /**
      */
-    @ManyToOne
-    private Interactivity interactivity;
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Interactivity> interactivity = new ArrayList<Interactivity>();
 
     /**
      */
-    @ManyToOne
-    private LearningResource learningResource;
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<LearningResource> learningResource = new ArrayList<LearningResource>();
 
     /**
      */
@@ -116,7 +111,7 @@ public class Resource {
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "resource")
     private Set<Activity> activity = new HashSet<Activity>();
     
-    @Async
+	//@Async
     public static void indexResources(Collection<Resource> resources) {
         List<SolrInputDocument> documents = new ArrayList<SolrInputDocument>();
         for (Resource resource : resources) {
@@ -130,19 +125,52 @@ public class Resource {
             sid.addField("resource.userightsurl_s", resource.getUseRightsURL());
             sid.addField("resource.isbasedonurl_s", resource.getIsBasedOnURL());
             sid.addField("resource.timerequired_s", resource.getTimeRequired());
-            sid.addField("resource.lang_s", resource.getLang().getName());
-            sid.addField("resource.interactivity_t", resource.getInteractivity());
-            sid.addField("resource.learningresource_t", resource.getLearningResource());
-            sid.addField("resource_audience_t", resource.getAudience());
-            sid.addField("resource.tag_t", resource.getTag());
-            sid.addField("resource.use_t", resource.getUse());
-            sid.addField("resource.agerange_t", resource.getAgeRange());
-            sid.addField("resource.alignment_t", resource.getAlignment());
-            sid.addField("resource.activity_t", resource.getActivity());
+            sid.addField("resource.lang_t", resource.getLang());
+            
+            // Audience
+            List<Audience> audiences = resource.getAudience();
+            StringBuilder audienceList = new StringBuilder();
+            for (Audience audience : audiences) {
+            	audienceList.append(audience.getName()).append(" ");	
+            }
+            sid.addField("resource.audience_t", audienceList);
+            
+            // AgeRange
+            List<AgeRange> ageRanges = resource.getAgeRange();
+            StringBuilder ageRangeList = new StringBuilder();
+            for (AgeRange ageRange : ageRanges) {
+            	ageRangeList.append(ageRange.getName()).append(" ");	
+            }
+            sid.addField("resource.agerange_t", ageRangeList);
+            
+            // Use
+            List<Use> uses = resource.getUse();
+            StringBuilder useList = new StringBuilder();
+            for (Use use : uses) {
+            	useList.append(use.getName()).append(" ");	
+            }
+            sid.addField("resource.use_t", useList);
+            
+            // Interactivity
+            List<Interactivity> interactivitys = resource.getInteractivity();
+            StringBuilder interactivityList = new StringBuilder();
+            for (Interactivity interactivity : interactivitys) {
+            	interactivityList.append(interactivity.getName()).append(" ");	
+            }
+            sid.addField("resource.interactivity_t", interactivityList);
+            
+            // LearningResource
+            List<LearningResource> learningResources = resource.getLearningResource();
+            StringBuilder learningResourceList = new StringBuilder();
+            for (LearningResource learningResource : learningResources) {
+            	learningResourceList.append(learningResource.getName()).append(" ");	
+            }
+            sid.addField("resource.learningresource_t", learningResourceList);            
+            
             sid.addField("resource.sourcetext_s", resource.getSourceText());
             sid.addField("resource.id_l", resource.getId());
             // Add summary field to allow searching documents for objects of this type
-            sid.addField("resource_solrsummary_t", new StringBuilder().append(resource.getName()).append(" ").append(resource.getExternalGUID()).append(" ").append(resource.getURL()).append(" ").append(resource.getDescription()).append(" ").append(resource.getCopyrightYear()).append(" ").append(resource.getUseRightsURL()).append(" ").append(resource.getIsBasedOnURL()).append(" ").append(resource.getTimeRequired()).append(" ").append(resource.getLang().getName()).append(" ").append(resource.getInteractivity()).append(" ").append(resource.getLearningResource()).append(" ").append(resource.getSourceText()).append(" ").append(resource.getId()));
+            sid.addField("resource_solrsummary_t", new StringBuilder().append(resource.getName()).append(" ").append(resource.getExternalGUID()).append(" ").append(resource.getURL()).append(" ").append(resource.getDescription()).append(" ").append(resource.getCopyrightYear()).append(" ").append(resource.getUseRightsURL()).append(" ").append(resource.getIsBasedOnURL()).append(" ").append(resource.getTimeRequired()).append(" ").append(resource.getLang()).append(" ").append(resource.getSourceText()).append(" ").append(resource.getId()));
             documents.add(sid);
         }
         try {
@@ -153,5 +181,4 @@ public class Resource {
             e.printStackTrace();
         }
     }
-
 }

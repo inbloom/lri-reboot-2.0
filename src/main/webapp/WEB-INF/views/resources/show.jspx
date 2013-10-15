@@ -12,8 +12,6 @@
         <field:display field="isBasedOnURL" id="s_org_inbloom_content_domain_Resource_isBasedOnURL" object="${resource}" z="vttmGc4U8i/h/dwOoGSyWxpoAzQ="/>
         <field:display field="timeRequired" id="s_org_inbloom_content_domain_Resource_timeRequired" object="${resource}" z="TZ2vyyoFBnzFp/zd+L7C5O2JSLU="/>
         <field:display field="lang" id="s_org_inbloom_content_domain_Resource_lang" object="${resource}" z="sOSg7CHjn9TRROHwzWmazp9UqmU="/>
-        <field:display field="interactivity" id="s_org_inbloom_content_domain_Resource_interactivity" object="${resource}" z="DwTVLUfoPkJiK2EoDEm6kMYH3BQ="/>
-        <field:display field="learningResource" id="s_org_inbloom_content_domain_Resource_learningResource" object="${resource}" z="KJxF6jwWHAUvHps1kjDdWuGzuI4="/>
         <field:display field="audience" id="s_org_inbloom_content_domain_Resource_audience" object="${resource}" z="w9aDKmEA01yQbeZLOM2CpEG6Rbs="/>
         <field:display field="tag" id="s_org_inbloom_content_domain_Resource_tag" object="${resource}" z="ivXAWdrtq3zAY3k93U8yZsNH8t0="/>
         <field:display field="use" id="s_org_inbloom_content_domain_Resource_use" object="${resource}" z="Zv/Lmrxs++WEjdKRMihbiJQXrpA="/>
@@ -22,5 +20,7 @@
         <field:display field="alignment" id="s_org_inbloom_content_domain_Resource_alignment" object="${resource}" z="TZ49pPx7Sc/trhQtx95G7vHOd0E="/>
         <field:display field="resourcePartyPartyType" id="s_org_inbloom_content_domain_Resource_resourcePartyPartyType" object="${resource}" z="jg3TWtHL7xvmKw8iu7scLnNZe6M="/>
         <field:display field="activity" id="s_org_inbloom_content_domain_Resource_activity" object="${resource}" z="sUJLfcRlsnGFksXSNZvwljdDCCM="/>
+        <field:display field="interactivity" id="s_org_inbloom_content_domain_Resource_interactivity" object="${resource}" z="DwTVLUfoPkJiK2EoDEm6kMYH3BQ="/>
+        <field:display field="learningResource" id="s_org_inbloom_content_domain_Resource_learningResource" object="${resource}" z="KJxF6jwWHAUvHps1kjDdWuGzuI4="/>
     </page:show>
 </div>

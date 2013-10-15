@@ -119,7 +119,7 @@ public class ResourceController {
     public ResponseEntity<String> putResourcesWithLearningResourcesJson(@PathVariable("id1") Long id1, @PathVariable("id2") Long id2, @RequestBody String json) {
         Resource resource = Resource.findResource(id1);
         LearningResource learningResource = LearningResource.findLearningResource(id2);
-        resource.setLearningResource(learningResource);
+        resource.getLearningResource().add(learningResource);
         learningResource.getResource().add(resource);
         resource.persist();
         learningResource.persist();
@@ -132,7 +132,7 @@ public class ResourceController {
     public ResponseEntity<String> putResourcesWithInteractivitysJson(@PathVariable("id1") Long id1, @PathVariable("id2") Long id2, @RequestBody String json) {
         Resource resource = Resource.findResource(id1);
         Interactivity interactivity = Interactivity.findInteractivity(id2);
-        resource.setInteractivity(interactivity);
+        resource.getInteractivity().add(interactivity);
         interactivity.getResource().add(resource);
         resource.persist();
         interactivity.persist();
