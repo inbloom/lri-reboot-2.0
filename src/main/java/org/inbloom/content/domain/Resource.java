@@ -167,6 +167,14 @@ public class Resource {
             }
             sid.addField("resource.learningresource_t", learningResourceList);            
             
+            // Tag
+            List<Tag> tags = resource.getTag();
+            StringBuilder tagList = new StringBuilder();
+            for (Tag tag : tags) {
+            	tagList.append(tag.getName()).append(" ");	
+            }
+            sid.addField("resource.tag_t", tagList);            
+
             sid.addField("resource.sourcetext_s", resource.getSourceText());
             sid.addField("resource.id_l", resource.getId());
             // Add summary field to allow searching documents for objects of this type

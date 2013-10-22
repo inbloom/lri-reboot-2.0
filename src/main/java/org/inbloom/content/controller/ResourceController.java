@@ -153,6 +153,10 @@ public class ResourceController {
 		resource.getResourcePartyPartyType().add(resourcePartyPartyType);
 		party.getResourcePartyPartyType().add(resourcePartyPartyType);
 		partyType.getResourcePartyPartyType().add(resourcePartyPartyType);
+		resourcePartyPartyType.persist();
+		//resource.persist();
+		//party.persist();
+		//partyType.persist();
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.OK);		
