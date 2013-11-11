@@ -6,6 +6,8 @@ import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.common.SolrDocument;
 import org.inbloom.content.domain.Activity;
 import org.inbloom.content.domain.AgeRange;
+import org.inbloom.content.domain.Alignment;
+import org.inbloom.content.domain.AlignmentType;
 import org.inbloom.content.domain.Audience;
 import org.inbloom.content.domain.Interactivity;
 import org.inbloom.content.domain.Lang;
@@ -14,6 +16,7 @@ import org.inbloom.content.domain.Party;
 import org.inbloom.content.domain.PartyType;
 import org.inbloom.content.domain.Resource;
 import org.inbloom.content.domain.ResourcePartyPartyType;
+import org.inbloom.content.domain.Standard;
 import org.inbloom.content.domain.Tag;
 import org.inbloom.content.domain.Use;
 import org.springframework.http.HttpHeaders;
@@ -150,18 +153,42 @@ public class ResourceController {
 		resourcePartyPartyType.setParty(party);
 		resourcePartyPartyType.setPartyType(partyType);
 		resourcePartyPartyType.setResource(resource);
-		resource.getResourcePartyPartyType().add(resourcePartyPartyType);
 		party.getResourcePartyPartyType().add(resourcePartyPartyType);
 		partyType.getResourcePartyPartyType().add(resourcePartyPartyType);
+		resource.getResourcePartyPartyType().add(resourcePartyPartyType);
 		resourcePartyPartyType.persist();
-		//resource.persist();
-		//party.persist();
-		//partyType.persist();
+		party.persist();
+		partyType.persist();
+		resource.persist();
+		Resource.indexResource(resource);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         return new ResponseEntity<String>(headers, HttpStatus.OK);		
 	}
 
+	@RequestMapping(value = "/{id1}/standards/{id2}/alignmenttypes/{id3}", method = RequestMethod.PUT, headers = "Accept=application/json")
+	public ResponseEntity<String> putResourcesWithStandardsJson(@PathVariable("id1") Long id1, @PathVariable("id2") Long id2, @PathVariable("id3") Long id3, @RequestBody String json) {
+		Resource resource = Resource.findResource(id1);
+		Standard standard = Standard.findStandard(id2);
+		AlignmentType alignmentType = AlignmentType.findAlignmentType(id3);
+		Alignment alignment = new Alignment();
+		alignment.setStandard(standard);
+		alignment.setAlignmentType(alignmentType);
+		alignment.setResource(resource);
+		standard.getAlignment().add(alignment);
+		alignmentType.getAlignment().add(alignment);
+		resource.getAlignment().add(alignment);
+		alignment.persist();
+		standard.persist();
+		alignmentType.persist();
+		resource.persist();
+		Resource.indexResource(resource);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json");
+        return new ResponseEntity<String>(headers, HttpStatus.OK);		
+	}
+	
+	
 	@RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
     public ResponseEntity<String> createFromJson(@RequestBody String json) {
         Resource resource = Resource.fromJsonToResource(json);

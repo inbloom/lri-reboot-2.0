@@ -173,8 +173,28 @@ public class Resource {
             for (Tag tag : tags) {
             	tagList.append(tag.getName()).append(" ");	
             }
-            sid.addField("resource.tag_t", tagList);            
+            sid.addField("resource.tag_t", tagList);
+            
+            // ResourcePartyPartyType
+            Set<ResourcePartyPartyType> resourcePartyPartyTypes = resource.getResourcePartyPartyType();
+            StringBuilder partyList = new StringBuilder();
+            for (ResourcePartyPartyType resourcePartyPartyType : resourcePartyPartyTypes) {
+            	Party party = resourcePartyPartyType.getParty();
+            	PartyType partyType = resourcePartyPartyType.getPartyType();
+            	partyList.append(partyType.getName()).append(":").append(party.getName()).append(" ");
+            }
+            sid.addField("resource.party_t", partyList);
 
+            // Alignment
+            Set<Alignment> alignments = resource.getAlignment();
+            StringBuilder standardList = new StringBuilder();
+            for (Alignment alignment : alignments) {
+            	Standard standard = alignment.getStandard();
+            	AlignmentType alignmentType = alignment.getAlignmentType();
+            	standardList.append(alignmentType.getName()).append(":").append(standard.getName()).append(" ");
+            }
+            sid.addField("resource.standard_t", standardList);
+            
             sid.addField("resource.sourcetext_s", resource.getSourceText());
             sid.addField("resource.id_l", resource.getId());
             // Add summary field to allow searching documents for objects of this type
