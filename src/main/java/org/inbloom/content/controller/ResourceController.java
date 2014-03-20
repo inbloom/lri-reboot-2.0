@@ -200,9 +200,12 @@ public class ResourceController {
     }
 	
 	@RequestMapping(value = "/search", method = RequestMethod.GET, headers = "Accept=application/json")
-	public ResponseEntity<String> searchSolr(@RequestParam("query") String query) {
+	public ResponseEntity<String> searchSolr(@RequestParam("query") String query, @RequestParam(value = "rows", defaultValue = "10") String rows, @RequestParam(value = "start", defaultValue = "0") String start) {
 		Set<Resource> resources = new LinkedHashSet<Resource>();
-		for (SolrDocument document: Resource.search(new SolrQuery(query)).getResults()) {
+		SolrQuery solrQuery = new SolrQuery(query);
+		solrQuery.setParam("rows", rows);
+		solrQuery.setParam("start", start);
+		for (SolrDocument document: Resource.search(solrQuery).getResults()) {
 			Long resourceId = (Long) document.getFieldValue("resource.id_l");
 			Resource resource = Resource.findResource(resourceId);
 			resources.add(resource);
