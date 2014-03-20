@@ -295,6 +295,11 @@
             <artifactId>solr-solrj</artifactId>
             <version>3.6.1</version>
         </dependency>
+    <dependency>
+    	<groupId>com.github.jsonld-java</groupId>
+    	<artifactId>jsonld-java</artifactId>
+    	<version>0.2</version>
+    </dependency>
     </dependencies>
     <build>
         <plugins>

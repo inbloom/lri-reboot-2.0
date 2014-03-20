@@ -180,8 +180,9 @@ public class Resource {
             StringBuilder partyList = new StringBuilder();
             for (ResourcePartyPartyType resourcePartyPartyType : resourcePartyPartyTypes) {
             	Party party = resourcePartyPartyType.getParty();
-            	PartyType partyType = resourcePartyPartyType.getPartyType();
-            	partyList.append(partyType.getName()).append(":").append(party.getName()).append(" ");
+            	//PartyType partyType = resourcePartyPartyType.getPartyType();
+            	//partyList.append(partyType.getName()).append(":").append(party.getName()).append(" ");
+            	partyList.append(party.getName()).append(" ");
             }
             sid.addField("resource.party_t", partyList);
 
@@ -190,8 +191,9 @@ public class Resource {
             StringBuilder standardList = new StringBuilder();
             for (Alignment alignment : alignments) {
             	Standard standard = alignment.getStandard();
-            	AlignmentType alignmentType = alignment.getAlignmentType();
-            	standardList.append(alignmentType.getName()).append(":").append(standard.getName()).append(" ");
+            	//AlignmentType alignmentType = alignment.getAlignmentType();
+            	//standardList.append(alignmentType.getName()).append(":").append(standard.getName()).append(" ");
+            	standardList.append(standard.getName()).append(" ");
             }
             sid.addField("resource.standard_t", standardList);
             

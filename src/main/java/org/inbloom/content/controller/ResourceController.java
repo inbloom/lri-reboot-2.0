@@ -1,5 +1,5 @@
 package org.inbloom.content.controller;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.apache.solr.client.solrj.SolrQuery;
@@ -201,7 +201,7 @@ public class ResourceController {
 	
 	@RequestMapping(value = "/search", method = RequestMethod.GET, headers = "Accept=application/json")
 	public ResponseEntity<String> searchSolr(@RequestParam("query") String query) {
-		Set<Resource> resources = new HashSet<Resource>();
+		Set<Resource> resources = new LinkedHashSet<Resource>();
 		for (SolrDocument document: Resource.search(new SolrQuery(query)).getResults()) {
 			Long resourceId = (Long) document.getFieldValue("resource.id_l");
 			Resource resource = Resource.findResource(resourceId);
