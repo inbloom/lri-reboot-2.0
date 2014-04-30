@@ -1,4 +1,4 @@
-#LRI Reboot
+#LRI 2.0
 
 ##DESCRIPTION
 LRI Reboot is a new implementation of the Learning Resource Index backed by an RDBMS and coded in Java.
