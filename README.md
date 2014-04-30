@@ -17,4 +17,4 @@ Interested in helping to improve the LRI Reboot? Great! You can take look at the
 Looking to interact with other developers interested in changing the future of education? Check out our [community forums](https://forums.inbloom.org/ "Forums"), and join the conversation!
 
 ##LICENSING
-LRI Reboot is licensed under the Apache License, Version 2.0. See LICENSE-2.0.txt for full license text.
+LRI Reboot is licensed under the Apache License, Version 2.0. See LICENSE.txt for full license text.
