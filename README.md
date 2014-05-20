@@ -12,9 +12,6 @@ To run on a single Ubuntu 12.04 machine using Jetty and H2 with Solr running on 
 	mvn jetty:run
 
 ##CONTRIBUTE
-Interested in helping to improve the LRI Reboot? Great! You can take look at the backlog on our [Jira issue tracker](https://support.inbloom.org "Jira"). Browse existing issues, or contribute your own ideas for improvement and new features.
-
-Looking to interact with other developers interested in changing the future of education? Check out our [community forums](https://forums.inbloom.org/ "Forums"), and join the conversation!
 
 ##LICENSING
 LRI Reboot 2.0 is licensed under the Apache License, Version 2.0. See LICENSE.txt for full license text.
